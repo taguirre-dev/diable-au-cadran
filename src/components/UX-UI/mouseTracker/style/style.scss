@@ -1,0 +1,68 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat");
+@import "../../../../style/variables.scss";
+
+body {
+  box-sizing: border-box;
+  background: #f1faee;
+  font-family: "Montserrat", sans-serif;
+}
+
+#app {
+  width: 100vw;
+  height: 100vh;
+}
+
+.wrapper {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%) perspective(600px) rotateY(20deg)
+    rotateX(10deg);
+  background-image: url("../../../../img/clock-trans.png");
+  background-size: cover;
+  transform-style: preserve-3d;
+  width: 200px;
+  height: 200px;
+  border-radius: 125px;
+
+  @media screen and (max-width: 850px) {
+    width: 150px;
+    height: 150px;
+  }
+
+  // & .shape {
+  //   position: absolute;
+  //   left: 4%;
+  //   top: 9px;
+  //   width: 240px;
+  //   height: 240px;
+  //   border-radius: 120px;
+  //   background: $color-1;
+  //   background-image: url("../img/vintage-gear.png");
+  //   background-size: cover;
+  //   transform: translateZ(100px) scale(0.5);
+  //   opacity: 0.5;
+  //   -webkit-box-shadow: 0px 0px 89px -5px rgba(255, 255, 255, 0.58);
+  //   -moz-box-shadow: 0px 0px 89px -5px rgba(255, 255, 255, 0.58);
+  //   box-shadow: 0px 0px 96px -6px rgba(255, 255, 255, 0.38);
+  // }
+
+  // & .shape2 {
+  //   position: absolute;
+  //   top: 38%;
+  //   left: 52%;
+  //   z-index: 2;
+  //   width: 50px;
+  //   height: 10px;
+  //   transform: translateZ(150px) translateX(-27px) translateY(-26px) scale(1.55);
+  //   opacity: 1;
+  //   border-radius: 8px;
+  //   p {
+  //     margin-top: 50%;
+  //     text-align: center;
+  //     font-size: 0.7em;
+  //     color: $color-3;
+  //     border-bottom: 1px solid white;
+  //   }
+  // }
+}

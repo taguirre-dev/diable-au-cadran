@@ -1,0 +1,22 @@
+//-----------------------------------------------------------------------------------------/
+//-------------------------  Section 0 ||| HomePage ---------------------------------------/
+//-----------------------------------------------------------------------------------------/
+
+.homePage {
+  .section-container {
+    background: url("../../../../img/jf-rouge.png");
+    background-size: cover;
+
+    @media screen and (max-width: 480px) and (max-height: 900px) {
+      background-size: left;
+    }
+
+    @media screen and (min-width: 480px) and (max-height: 1200px) {
+      background-position: right;
+    }
+
+    @media screen and (min-width: 900px) and (max-height: 1400px) {
+      background-position: right;
+    }
+  } /* .section-container */
+} /* &.section0 */

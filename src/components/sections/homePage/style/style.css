@@ -1,0 +1,29 @@
+.homePage {
+  /* .section-container */
+}
+
+.homePage .section-container {
+  background: url("../../../../img/jf-rouge.png");
+  background-size: cover;
+}
+
+@media screen and (max-width: 480px) and (max-height: 900px) {
+  .homePage .section-container {
+    background-size: left;
+  }
+}
+
+@media screen and (min-width: 480px) and (max-height: 1200px) {
+  .homePage .section-container {
+    background-position: right;
+  }
+}
+
+@media screen and (min-width: 900px) and (max-height: 1400px) {
+  .homePage .section-container {
+    background-position: right;
+  }
+}
+
+/* &.section0 */
+/*# sourceMappingURL=style.css.map */

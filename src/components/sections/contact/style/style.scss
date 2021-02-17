@@ -1,0 +1,131 @@
+@import "../../../../style/variables.scss";
+
+//-----------------------------------------------------------------------------------------/
+//-------------------------  Section 3 ||| Contact  ---------------------------------------/
+//-----------------------------------------------------------------------------------------/
+.section3.contact {
+  background-color: $color-2;
+  .section-container {
+    display: flex;
+    .right-side {
+      display: flex;
+      flex-direction: column;
+      flex-basis: 50%;
+      align-items: flex-start;
+      justify-items: center;
+      // width: 100%;
+      .adress {
+        flex-basis: 30%;
+        padding: 40px 0 0 12%;
+
+        h3 {
+          font-size: 2em;
+        }
+        span {
+          display: block;
+          color: $color-3;
+        }
+      }
+      .form-contact {
+        display: flex;
+        flex-direction: column;
+        padding-top: 10%;
+        flex-basis: 70%;
+        width: 100%;
+        padding: 0 14% 0 12%;
+        .input-field {
+          margin-bottom: 5px;
+          label {
+            color: $color-3;
+          }
+        } /* .input-fied */
+        .send-email-btn {
+          width: 100%;
+          padding: 0;
+        }
+      } /* .form-contact */
+    } /* .right-side */
+    .left-side {
+      flex-basis: 50%;
+      width: 100%;
+    }
+  } /* .section-container */
+
+  // ************************************************************************************************
+  // *** Smartphone - paysage
+  // ************************************************************************************************
+  @media screen and (max-width: 900px) and (max-height: 480px) {
+    .section-container {
+      .right-side {
+        font-size: 0.5em;
+        .adress {
+          display: none;
+        }
+        .form-contact {
+          margin-top: 20px;
+          padding: 0 25% 0 10%;
+
+          .input-field {
+            margin-bottom: 5px;
+            .ant-form-item-label {
+              padding: 0;
+              label {
+                color: $color-3;
+                font-size: 0.8em;
+              }
+            }
+            textarea {
+              height: 80px !important;
+              min-height: 80px !important;
+            }
+          }
+        } /* .form-contact */
+      } /* right-side */
+    } /* section-container */
+  } /* @media screen and (max-width: 900px) and (max-height: 480px) */
+
+  // ************************************************************************************************
+  // *** Smartphone - portrait
+  // ************************************************************************************************
+  @media screen and (max-width: 480px) and (max-height: 900px) {
+    .section-container {
+      flex-direction: column;
+      .right-side {
+        .adress {
+          padding-top: 10px;
+          padding-bottom: 10px;
+          h3 {
+            display: none;
+          }
+          span {
+            font-size: 0.9em;
+            margin-bottom: 0;
+          }
+        }
+        .form-contact {
+          margin-bottom: 5%;
+          .input-field {
+            .ant-form-item-label {
+              padding: 0;
+              label {
+                color: $color-3;
+                height: 0;
+                font-size: 0.9em;
+              }
+            }
+            textarea {
+              height: 100px !important;
+              min-height: 100px !important;
+            }
+          }
+        } /* .form-contact */
+      } /* .right-side */
+    } /* .section-container */
+  } /* @media screen and (max-width: 480px) and (max-height: 900px) */
+
+  // ************************************************************************************************
+  // *** Smartphone - portrait (screen pas très haut)
+  // ************************************************************************************************
+  @media screen and (max-width: 480px) and (max-height: 680px) {
+  } /* @media screen and (max-width: 480px) and (max-height: 680px) */
+} /* &.section3 */

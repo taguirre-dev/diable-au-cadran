@@ -1,0 +1,93 @@
+@import "../../../../style/variables.scss";
+
+//-----------------------------------------------------------------------------------------/
+//-------------------------  Section 2 ||| Savoir-Faire  ---------------------------------------/
+//-----------------------------------------------------------------------------------------/
+
+.section2.savoir-faire {
+  .section-container {
+    flex-direction: row-reverse;
+    animation: sliding-background 40s linear infinite !important;
+    background: url("../../../../img/pendules.jpg") no-repeat right / 120%;
+
+    .left-bloc-dark {
+      &:after {
+        display: block;
+        content: "";
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        top: -40px;
+        right: -40px;
+        border-top: 3px solid $color-3;
+        border-right: 3px solid $color-3;
+      } /* &:after */
+      &:before {
+        display: block;
+        content: "";
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        bottom: -40px;
+        left: -40px;
+        border-bottom: 3px solid $color-3;
+        border-left: 3px solid $color-3;
+      } /* &:before */
+
+      .text-container {
+        .profil-picture {
+          width: 100px;
+          margin: 40px auto;
+          background-image: url("../../../../img/jf.jpg");
+          // background-position: center;
+          background-size: cover;
+          clip-path: circle(50% at 50% 50%);
+          // margin-left: 50%;
+          .picture {
+            height: 100px;
+            width: 100px;
+          }
+        } /* profil-picture */
+
+        // ************************************************************************************************
+        // *** Smartphone - paysage
+        // ************************************************************************************************
+        @media screen and (max-width: 900px) and (max-height: 480px) {
+          &::before {
+            bottom: -20px;
+            left: -20px;
+          }
+          &::after {
+            top: -20px;
+            right: -20px;
+          }
+        } /* @media screen and (max-width: 900px) and (max-height: 480px) */
+      } /* .text-container */
+    } /* left-bloc-dark */
+  } /* .section-container */
+
+  // Smartphone - portrait
+  @media screen and (max-width: 480px) and (max-height: 900px) {
+    .section-container {
+      .left-bloc-dark {
+        .text-container {
+          &::before {
+            bottom: -20px;
+            left: -20px;
+          }
+          &::after {
+            top: -20px;
+            right: -20px;
+          }
+          .profil-picture {
+            width: 60px;
+            .picture {
+              height: 60px;
+              width: 60px;
+            }
+          } /* profil-picture */
+        } /* text-container */
+      } /* .left-bloc-dark */
+    } /* .section-container */
+  } /* @media screen and (max-width: 480px) and (max-height: 900px) */
+} /* .section2.savoir-faire */

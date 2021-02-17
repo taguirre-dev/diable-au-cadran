@@ -1,0 +1,35 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat");
+body {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background: #f1faee;
+  font-family: "Montserrat", sans-serif;
+}
+
+#app {
+  width: 100vw;
+  height: 100vh;
+}
+
+.wrapper {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%) perspective(600px) rotateY(20deg) rotateX(10deg);
+          transform: translate(-50%, -50%) perspective(600px) rotateY(20deg) rotateX(10deg);
+  background-image: url("../../../../img/clock-trans.png");
+  background-size: cover;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  width: 200px;
+  height: 200px;
+  border-radius: 125px;
+}
+
+@media screen and (max-width: 850px) {
+  .wrapper {
+    width: 150px;
+    height: 150px;
+  }
+}
+/*# sourceMappingURL=style.css.map */

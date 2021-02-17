@@ -1,0 +1,78 @@
+@import "../../../../style/variables.scss";
+@import "../../../../style/common.css";
+
+.scroll-info {
+  position: absolute;
+  bottom: -20px;
+  left: 0;
+  right: 0;
+  margin-top: 40px;
+  animation-name: slide-to-the-top;
+  animation-duration: 1s;
+  animation-delay: 0.5s;
+  animation-fill-mode: forwards;
+
+  .mousey {
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    right: 50%;
+    transform: translate(-50%, 0);
+    margin: auto;
+    width: 2px;
+    padding: 5px 8px;
+    height: 16px;
+    border: 1px solid #fff;
+    border-radius: 12px;
+    box-sizing: content-box;
+
+    .scroller {
+      width: 2px;
+      height: 7px;
+      border-radius: 25%;
+      background-color: #fff;
+      animation-name: scroll;
+      animation-duration: 2.2s;
+      animation-timing-function: cubic-bezier(0.15, 0.41, 0.69, 0.94);
+      animation-iteration-count: infinite;
+    }
+  } /* .mousey */
+} /* .scroll-info */
+
+// ********************************************************************************/
+// ***********     Key Frames      ************************************************/
+// ********************************************************************************/
+
+// utilisé sur la home page
+@keyframes slide-to-the-top {
+  to {
+    bottom: 15%;
+  }
+}
+
+// utilisé sur l'image de la home page
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+// utilisé pour inciter le scroll sur la home page
+@keyframes scroll {
+  0% {
+    opacity: 0;
+    bottom: -50px;
+  }
+  10% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(6px);
+    opacity: 0;
+    bottom: 0px;
+  }
+}

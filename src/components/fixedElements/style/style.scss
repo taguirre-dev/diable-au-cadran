@@ -1,0 +1,66 @@
+@import "../../../style/variables.scss";
+@import "../../../style/common.css";
+
+.header {
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  height: 10%;
+  width: 100%;
+
+  .site-name {
+    position: absolute;
+    left: -200px;
+    margin-top: 40px;
+    animation-name: slide-to-the-right;
+    animation-duration: 1s;
+    animation-delay: 0.5s;
+    animation-fill-mode: forwards;
+    padding: 10px 0;
+    color: $color-3;
+    font-weight: bold;
+  } /* site-name */
+
+  &.custom-section-4 {
+    .site-name {
+      left: 40px;
+      animation-name: slide-page-to-left;
+      animation-duration: 1s;
+      animation-delay: 0.5s;
+      animation-fill-mode: forwards;
+    } /* .site-name */
+  } /* &.custom-section-4 */
+
+  @media screen and (max-width: 850px) and (max-height: 900px) {
+    .site-name {
+      margin-top: 20px;
+    } /* site-name */
+  } /* @media screen */
+  @media screen and (max-width: 850px) and (max-height: 480px) {
+    .site-name {
+      margin-top: 10px;
+    } /* site-name */
+  } /* @media screen */
+} /* .header */
+
+// ********************************************************************************/
+// ***********     Key Frames      ************************************************/
+// ********************************************************************************/
+
+@keyframes slide-to-the-right {
+  to {
+    left: 40px;
+  }
+}
+
+@keyframes slide-to-the-left {
+  to {
+    right: 40px;
+  }
+}
+
+@keyframes slide-page-to-left {
+  to {
+    left: -200px;
+  }
+}

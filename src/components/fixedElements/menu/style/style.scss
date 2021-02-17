@@ -1,0 +1,101 @@
+@import "../../../../style/variables.scss";
+@import "../../../../style/common.css";
+
+/* -------------------------------------------------------------------------------- */
+/* ------------------------------------- MENU ------------------------------------- */
+.sections {
+  .main-menu {
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    width: 100%;
+
+    .list-item-menu {
+      background-color: $color-2;
+      position: fixed;
+      right: 0;
+      top: 0;
+      height: 100%;
+      min-width: 50%;
+      padding: 10% 15% 0 10%;
+      -webkit-transform: translateX(100%) translateZ(0px);
+      -moz-transform: translateX(100%) translateZ(0px);
+      transform: translateX(100%) translateZ(0px);
+      -webkit-transition: -webkit-transform 500ms ease-in-out;
+      -moz-transition: -moz-transform 500ms ease-in-out;
+      transition: transform 500ms ease-in-out;
+
+      .item {
+        color: $color-3;
+        display: block;
+        padding: 5px 10px;
+        cursor: pointer;
+        font-size: 2em;
+
+        &[disabled] {
+          color: $color-1;
+        }
+      } /* li.item-menu */
+
+      .adress {
+        font-size: 1.4em;
+        color: $color-3;
+        padding: 150px 10px;
+        span {
+          display: block;
+          color: $color-3;
+        }
+      } /* .adress */
+
+      @media screen and (max-width: 480px) and (max-height: 900px) {
+        padding: 25% 15% 0 10%;
+        min-width: 100%;
+        .item {
+          font-size: 1.5em;
+        }
+      }
+
+      @media screen and (max-width: 900px) and (max-height: 480px) {
+        padding: 8% 10% 0 5%;
+        .item {
+          font-size: 1em;
+        }
+        .adress {
+          font-size: 1em;
+          padding: 30% 10px;
+        }
+      } /* @media screen and (max-width: 900px) and (max-height: 480px) */
+    } /* .list-item-menu */
+
+    .list-item-menu.open {
+      transform: translateX(0%);
+    } /* .list-item-menu.open */
+
+    .btn-menu {
+      cursor: pointer;
+      position: absolute;
+      right: -100px;
+      margin-top: 40px;
+      animation-name: slide-to-the-left;
+      animation-duration: 1s;
+      animation-delay: 0.5s;
+      animation-fill-mode: forwards;
+      padding: 10px 0 10px 10px;
+
+      .menu {
+        color: $color-3;
+      }
+    } /* btn-menu */
+
+    @media screen and (max-width: 850px) and (max-height: 900px) {
+      .btn-menu {
+        margin-top: 20px;
+      } /* btn-menu */
+    } /* @media screen */
+    @media screen and (max-width: 850px) and (max-height: 480px) {
+      .btn-menu {
+        margin-top: 10px;
+      } /* btn-menu */
+    } /* @media screen */
+  } /* .main-menu */
+} /* sections */

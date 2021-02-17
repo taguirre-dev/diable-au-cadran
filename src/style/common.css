@@ -1,0 +1,27 @@
+@import url("https://fonts.googleapis.com/css?family=Lalezar");
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html,
+body {
+  background-color: #0d0d0d;
+  font-family: "Helvetica", arial, sans-serif;
+  height: 100vh;
+}
+
+html #root .sections,
+body #root .sections {
+  height: 100vh;
+}
+
+html #root .sections .container,
+body #root .sections .container {
+  position: relative;
+}
+/*# sourceMappingURL=common.css.map */

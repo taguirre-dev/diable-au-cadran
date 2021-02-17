@@ -1,0 +1,100 @@
+@import url(/Users/aguirregabiria/Desktop/React/diable-au-cadran/src/style/common.css);
+.header {
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  height: 10%;
+  width: 100%;
+  /* site-name */
+  /* &.custom-section-4 */
+  /* @media screen */
+  /* @media screen */
+}
+
+.header .site-name {
+  position: absolute;
+  left: -200px;
+  margin-top: 40px;
+  -webkit-animation-name: slide-to-the-right;
+          animation-name: slide-to-the-right;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  padding: 10px 0;
+  color: white;
+  font-weight: bold;
+}
+
+.header.custom-section-4 {
+  /* .site-name */
+}
+
+.header.custom-section-4 .site-name {
+  left: 40px;
+  -webkit-animation-name: slide-page-to-left;
+          animation-name: slide-page-to-left;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@media screen and (max-width: 850px) and (max-height: 900px) {
+  .header {
+    /* site-name */
+  }
+  .header .site-name {
+    margin-top: 20px;
+  }
+}
+
+@media screen and (max-width: 850px) and (max-height: 480px) {
+  .header {
+    /* site-name */
+  }
+  .header .site-name {
+    margin-top: 10px;
+  }
+}
+
+/* .header */
+@-webkit-keyframes slide-to-the-right {
+  to {
+    left: 40px;
+  }
+}
+@keyframes slide-to-the-right {
+  to {
+    left: 40px;
+  }
+}
+
+@-webkit-keyframes slide-to-the-left {
+  to {
+    right: 40px;
+  }
+}
+
+@keyframes slide-to-the-left {
+  to {
+    right: 40px;
+  }
+}
+
+@-webkit-keyframes slide-page-to-left {
+  to {
+    left: -200px;
+  }
+}
+
+@keyframes slide-page-to-left {
+  to {
+    left: -200px;
+  }
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,116 @@
+@import url(/Users/aguirregabiria/Desktop/React/diable-au-cadran/src/style/common.css);
+.scroll-info {
+  position: absolute;
+  bottom: -20px;
+  left: 0;
+  right: 0;
+  margin-top: 40px;
+  -webkit-animation-name: slide-to-the-top;
+          animation-name: slide-to-the-top;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  /* .mousey */
+}
+
+.scroll-info .mousey {
+  position: absolute;
+  top: 85%;
+  left: 50%;
+  right: 50%;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+  margin: auto;
+  width: 2px;
+  padding: 5px 8px;
+  height: 16px;
+  border: 1px solid #fff;
+  border-radius: 12px;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+}
+
+.scroll-info .mousey .scroller {
+  width: 2px;
+  height: 7px;
+  border-radius: 25%;
+  background-color: #fff;
+  -webkit-animation-name: scroll;
+          animation-name: scroll;
+  -webkit-animation-duration: 2.2s;
+          animation-duration: 2.2s;
+  -webkit-animation-timing-function: cubic-bezier(0.15, 0.41, 0.69, 0.94);
+          animation-timing-function: cubic-bezier(0.15, 0.41, 0.69, 0.94);
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+/* .scroll-info */
+@-webkit-keyframes slide-to-the-top {
+  to {
+    bottom: 15%;
+  }
+}
+@keyframes slide-to-the-top {
+  to {
+    bottom: 15%;
+  }
+}
+
+@-webkit-keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes scroll {
+  0% {
+    opacity: 0;
+    bottom: -50px;
+  }
+  10% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translateY(6px);
+            transform: translateY(6px);
+    opacity: 0;
+    bottom: 0px;
+  }
+}
+
+@keyframes scroll {
+  0% {
+    opacity: 0;
+    bottom: -50px;
+  }
+  10% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translateY(6px);
+            transform: translateY(6px);
+    opacity: 0;
+    bottom: 0px;
+  }
+}
+/*# sourceMappingURL=style.css.map */
